@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inova Studio</title>
+    <link rel="icon" type="image/png" href="assets/logo_inova.png">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div id="particles-js"></div> <!-- Fundo animado -->
+            <div class="topo">
+                <div class="hamburguer" onclick="toggleMenu()">
+                    &#9776; <!-- Unicode para o ícone ☰ -->
+                </div>
+                <h1>Inova Studio</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <img src="assets/logo_inova.png" alt="Logo da Agência" class="logo">
+        </header>
+        
+        
+
+        <section id="home" class="home">
+            <h2>Bem-vindo à nossa agência!</h2>
+            <p class="fade-text">Transformamos suas ideias em realidade digital.</p> 
+            <p class="fade-text">Design, desenvolvimento e inovação para o seu negócio.</p> 
+            <p class="fade-text">A Inova Studio é uma agência de design web que oferece soluções criativas e personalizadas para empresas de todos os tamanhos.</p> 
+            <p class="fade-text">Nossa equipe é composta por profissionais experientes e apaixonados pelo que fazem, prontos para ajudar você a alcançar seus objetivos online.</p>
+            <a href="#contato" class="botao">Solicite um orçamento</a>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2>Sobre nós</h2>
+            <div class="sobre-img-p">
+                <img src="assets/mulher.png" alt="Mulher com laptop" class="imagem-sobre">
+
+                <p>Somos uma equipe de designers e desenvolvedores apaixonados por criar experiências digitais incríveis. Nosso objetivo é ajudar empresas a se destacarem no mundo online, oferecendo soluções personalizadas e inovadoras. Combinamos criatividade e tecnologia para entregar resultados excepcionais.</p>
+            </div>
+               
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li><img src="assets/img-1.png">Desenvolvimento de Sites</li>
+                <li><img src="assets/img-2.png">Desenvolvimento Web</li>
+                <li><img src="assets/img-3.png">Marketing Digital</li>
+                <li><img src="assets/img-4.png">Consultoria em UX/UI</li>
+                <li><img src="assets/img-5.png">SEO Otimizado</li>
+                <li><img src="assets/img-6.png">Gestão de Redes Sociais</li>
+            </ul>
+        </section>
+
+        <section id="depoimentos">
+            <h2 data-aos="fade-up">Depoimentos</h2>
+            <p data-aos="fade-up">"A equipe foi incrível! Meu site ficou melhor do que eu esperava!" - Cliente Satisfeito</p>
+            <p data-aos="fade-up">"Profissionais dedicados e criativos. Recomendo!" - Cliente Satisfeito</p>
+            <p data-aos="fade-up">"O suporte foi excepcional. Sempre prontos para ajudar!" - Cliente Feliz</p>
+            <p data-aos="fade-up">"Transformaram minha ideia em um site lindo e funcional!" - Cliente Encantado</p>
+            <p data-aos="fade-up">"A Inova Studio superou todas as minhas expectativas!" - Cliente Impressionado</p>
+            <p>"Recomendo a todos que buscam qualidade e inovação!" - Cliente Satisfeito</p>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="contato-container">
+              <div class="contato-texto">
+                <h2>Entre em contato</h2>
+                <p>Estamos aqui para ajudar! Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+                <img src="assets/ctt.png" alt="Imagem de contato" class="imagem-contato">
+              </div>
+          
+              <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
+          </section>
+                     
+
+    </div>
+
+    <footer class="footer">
+        
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>© 2025 Inova Studio. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Alana Motta</p>
+    </footer>
+    
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json');
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            const hamburguer = document.querySelector('.hamburguer');
+
+            nav.classList.toggle('active');
+
+            if (nav.classList.contains('active')) {
+                hamburguer.innerHTML = '&#10005;'; // Ícone "X"
+            } else {
+                hamburguer.innerHTML = '&#9776;'; // Ícone "☰"
+            }
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1 
+    });
+
+    const fadeText = document.querySelectorAll('.fade-text');
+    fadeText.forEach(el => observer.observe(el));
+    </script>
+    
+</body>
+</html>
